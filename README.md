@@ -557,40 +557,7 @@ This keeps the frontend more organized than putting every page into one large fi
 
 ---
 
-# 📸 Screenshots
 
-Add screenshots of your actual application here.
-
-Recommended folder:
-
-```text
-screenshots/
-├── home.png
-├── listings.png
-├── listing-details.png
-├── create-listing.png
-└── edit-listing.png
-```
-
-Then add them to this README:
-
-```markdown
-## 📸 Screenshots
-
-### 🏠 Listings
-
-![Listings](screenshots/listings.png)
-
-### 🏡 Listing Details
-
-![Listing Details](screenshots/listing-details.png)
-
-### ➕ Create Listing
-
-![Create Listing](screenshots/create-listing.png)
-```
-
----
 
 # 🚀 Future Improvements
 
