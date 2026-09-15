@@ -26,7 +26,7 @@ A full-stack **property listing web application** built with **Node.js, Express.
 
 ## 📖 About
 
-**MajorProject** is a full-stack web application for working with property listings.
+**WonderLust** is a full-stack web application for working with property listings.
 
 The project focuses on the complete flow of a database-driven Express application:
 
