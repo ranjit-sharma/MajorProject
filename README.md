@@ -1,4 +1,4 @@
-# 🏡 MajorProject — Property Listing Web App
+# 🏡 WonderLust — Property Listing Web App
 
 <div align="center">
 
