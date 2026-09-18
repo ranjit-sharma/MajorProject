@@ -5,9 +5,10 @@ const path = require("path");
 const methodOverride = require("method-override");
 const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
+const session = require("express-session");
 
-const listings = require ("./routes/listing.js");
-const reviews = require ("./routes/review.js");
+const listings = require("./routes/listing.js");
+const reviews = require("./routes/review.js");
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/wonderlust";
 
@@ -30,11 +31,22 @@ app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
+const sessionOptions = {
+    secret: "mysupersecratecode",
+    resave: false,
+    saveUninitialized: true,
+    cookies: {
+        express: Date.now() + 7 * 24 * 60 * 60 * 1000;
+    }
+};
+
+app.use(session(sessionOptions));
+
 app.get("/", (req, res) => {
     res.send("Hi, i am root");
 });
 
-app.use("/listings",listings); //for listing
+app.use("/listings", listings); //for listing
 app.use("/listings/:id/reviews", reviews); //for review
 
 app.all("/{*splat}", (req, res, next) => {
