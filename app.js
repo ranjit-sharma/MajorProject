@@ -7,6 +7,9 @@ const ejsMate = require("ejs-mate");
 const ExpressError = require("./utils/ExpressError.js");
 const session = require("express-session");
 const flash = require("connect-flash");
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
+const User = require("./models/user.js");
 
 const listings = require("./routes/listing.js");
 const reviews = require("./routes/review.js");
@@ -50,7 +53,15 @@ app.get("/", (req, res) => {
 app.use(session(sessionOptions));
 app.use(flash());
 
-app.use((req,res,next)=>{
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
+app.use((req, res, next) => {
     res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");
     next();
@@ -71,4 +82,10 @@ app.use((err, req, res, next) => {
 
 app.listen(8080, () => {
     console.log("server is listening to port 8080");
-});  
+});
+
+
+
+
+
+// 7777777777777777777777
