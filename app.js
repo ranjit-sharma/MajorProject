@@ -11,8 +11,9 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const User = require("./models/user.js");
 
-const listings = require("./routes/listing.js");
-const reviews = require("./routes/review.js");
+const listingRouter = require("./routes/listing.js");
+const reviewRouter = require("./routes/review.js");
+const userRouter = require("./routes/user.js");
 
 const MONGO_URL = "mongodb://127.0.0.1:27017/wonderlust";
 
@@ -67,8 +68,19 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/listings", listings); //for listing
-app.use("/listings/:id/reviews", reviews); //for review
+/* app.get("/demouser",async (req,res)=>{
+    let fakeUser = new User({
+        email: "student@gmail.com",
+        username: "student",
+    });
+
+    let registerdUser = await User.register(fakeUser,"helloworld");
+    res.send(registerdUser);
+}); */
+
+app.use("/listings", listingRouter); //for listing
+app.use("/listings/:id/reviews", reviewRouter); //for review
+app.use("/", userRouter); //for user
 
 app.all("/{*splat}", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found!"));
@@ -83,9 +95,3 @@ app.use((err, req, res, next) => {
 app.listen(8080, () => {
     console.log("server is listening to port 8080");
 });
-
-
-
-
-
-// 7777777777777777777777
