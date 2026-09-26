@@ -2,7 +2,7 @@ const sampleListings = [
   {
     title: "Cozy Beachfront Cottage",
     description: "Escape to this charming beachfront cottage for a relaxing getaway.",
-    image: "https://images.unsplash.com/photo-1525741081-9d7c0d7c0c5a",
+    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4",
     price: 1500,
     location: "Malibu",
     country: "United States",
