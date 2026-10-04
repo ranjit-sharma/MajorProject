@@ -116,3 +116,20 @@ card-body {
     padding-left: 0;
     padding-right: 0;
 }
+
+
+/* only for edit section image showing */
+.edit-img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/*map*/
+#map {
+    height: 400px;
+    width: 85vh;
+    border-radius: 1rem;
+    
+}
