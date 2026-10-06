@@ -100,10 +100,12 @@
                                                     <%= review.comment %>
                                                 </p>
 
-                                                <form class="mb-3" method="POST"
-                                                    action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
-                                                    <button class="btn btn-dark btn-sm">Delete</button>
-                                                </form>
+                                               <% if(currUser && review.author._id.equals(currUser._id)) { %>
+                                                    <form class="mb-3" method="POST"
+                                                        action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
+                                                            <button class="btn btn-dark btn-sm">Delete</button>
+                                                    </form>
+                                                <% } %>
                                             </div>
                                         </div>
                                         <% } %>
