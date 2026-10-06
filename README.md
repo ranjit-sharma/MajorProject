@@ -75,13 +75,7 @@ https://wonderlust-1tk1.onrender.com/
 **GitHub Repository:**  
 https://github.com/ranjit-sharma/MajorProject
 
-The deployed root URL redirects to the main listings page:
 
-```text
-https://wonderlust-1tk1.onrender.com/
-                    ↓
-                /listings
-```
 
 ---
 
@@ -428,7 +422,6 @@ Contains application/business logic.
 ```text
 MajorProject/
 │
-├── classroom/
 │
 ├── controller/
 │   ├── listings.js
@@ -1095,14 +1088,6 @@ git push origin feature/your-feature
 ```
 
 Then create a Pull Request on GitHub.
-
----
-
-# 📄 License
-
-This project is currently an educational/portfolio project.
-
-If you plan to distribute it as open-source software, add an appropriate license such as MIT and include a `LICENSE` file.
 
 ---
 
