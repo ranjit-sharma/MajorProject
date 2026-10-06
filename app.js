@@ -107,6 +107,10 @@ app.use("/listings", listingRouter); //for listing
 app.use("/listings/:id/reviews", reviewRouter); //for review
 app.use("/", userRouter); //for user
 
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
+
 app.all("/{*splat}", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
 });
