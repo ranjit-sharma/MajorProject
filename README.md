@@ -1,4 +1,4 @@
-# 🏡 WonderLust — Full-Stack Travel & Property Listing Web App.
+ # 🏡 WonderLust — Full-Stack Travel & Property Listing Web App.
 
 ---
 
@@ -303,65 +303,62 @@ Application ────────┤
 
 ---
 
-# 🛠️ Technology Stack
-
-## Core Backend
-
-- **Node.js**
-- **Express.js 5**
-- **Mongoose**
-- **MongoDB**
-- **EJS**
-- **EJS-Mate**
-
-## Frontend
-
-- **HTML5**
-- **CSS3**
-- **JavaScript**
-- **Bootstrap**
-- **Font Awesome**
-- **EJS**
-
-## Authentication & Sessions
-
-- **Passport.js**
-- **Passport Local Strategy**
-- **Express Session**
-- **Connect Mongo**
-- **Connect Flash**
-
-## Validation & Middleware
-
-- **Joi**
-- **Custom Express Middleware**
-- **ExpressError**
-- **wrapAsync**
-- **Method Override**
-- **dotenv**
-
-## Image Upload & Storage
-
-- **Multer**
-- **multer-storage-cloudinary**
-- **Cloudinary**
-
-## Maps & Location
-
-- **Mapbox**
-- **Mapbox Geocoding**
-- **GeoJSON**
-- **@mapbox/mapbox-sdk**
-
-## Development / Deployment
-
-- **Git**
-- **GitHub**
-- **Nodemon**
-- **Render**
 
 ---
 
+## 🛠️ Technology Stack
+
+### Frontend
+
+| Technology | Purpose |
+|---|---|
+| HTML5 | Page structure |
+| CSS3 | Custom styling |
+| Bootstrap | Responsive UI and layout |
+| JavaScript | Client-side interactions |
+| EJS | Server-side rendering |
+| EJS-Mate | Layouts and reusable templates |
+| Font Awesome | Icons |
+
+### Backend
+
+| Technology | Purpose |
+|---|---|
+| Node.js | JavaScript runtime |
+| Express.js | Web framework |
+| Express Router | Route organization |
+| Method Override | PUT/DELETE from HTML forms |
+| Passport.js | Authentication |
+| Express Session | Session management |
+| Connect Flash | Notifications |
+
+### Database
+
+| Technology | Purpose |
+|---|---|
+| MongoDB | Database |
+| MongoDB Atlas | Cloud database |
+| Mongoose | ODM |
+
+### Validation / Utilities
+
+| Technology | Purpose |
+|---|---|
+| Joi | Request validation |
+| ExpressError | Custom errors |
+| wrapAsync | Async error forwarding |
+| Multer | Multipart/file uploads |
+
+### Cloud / APIs
+
+| Service | Purpose |
+|---|---|
+| Cloudinary | Image storage |
+| Mapbox | Maps |
+| Mapbox Geocoding API | Location to coordinates |
+| Render | Deployment |
+
+---
 # 🏗️ Architecture
 
 WonderLust follows an **MVC (Model–View–Controller)** architecture.
