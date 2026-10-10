@@ -1088,7 +1088,7 @@ Then create a Pull Request on GitHub.
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Author.
 
 ## Ranjit Sharma
 
